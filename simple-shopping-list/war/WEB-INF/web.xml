@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+  version="2.5">
+  <servlet>
+    <servlet-name>CreateNewTodo</servlet-name>
+    <servlet-class>org.home.gae.shopping.ServletCreateArticle</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateNewTodo</servlet-name>
+    <url-pattern>/new</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <servlet-name>RemoveArticle</servlet-name>
+    <servlet-class>org.home.gae.shopping.ServletDeleteArticle</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RemoveArticle</servlet-name>
+    <url-pattern>/done</url-pattern>
+  </servlet-mapping>
+  
+  <welcome-file-list>
+    <welcome-file>ShoppingApplication.jsp</welcome-file>
+  </welcome-file-list>
+  <error-page>  
+    <exception-type>java.lang.Throwable</exception-type>  
+    <location>/errorpage.jsp</location>  
+  </error-page>
+</web-app> 
